@@ -1,0 +1,53 @@
+.Footer {
+	height: 274px;
+    box-sizing: border-box;
+    background-color: #292929;
+    width: 100%;
+}
+
+.Footer img {
+    height: 28px;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.FooterBottom {
+    color: #fff;
+    width: 100%;
+    height: 90px;
+    background: #101010;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    margin-top:50px;
+}
+
+.FooterBottom span {
+    position: relative;
+    top: 40%;
+    font-size: 16px;
+}
+
+.FooterContent {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 50px;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+.FooterSubContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.FooterText {
+    font-family: 'YuGothic', sans-serif;
+    display: block;
+    color: #fff;
+    width: 414px;
+    font-size: 16px;
+    font-weight: bold;
+}
