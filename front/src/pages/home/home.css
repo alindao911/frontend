@@ -1,4 +1,4 @@
-.AuthForm {
+.auth-form {
   -webkit-transition: max-height 0.5s ease-in;
   transition: max-height 0.5s ease-in;
   transition-timing-function: linear;
@@ -6,7 +6,7 @@
   overflow-y: hidden;
 }
 
-.SliderSection {
+.slider-section {
   background-color: #101010;
   height: 666px;
   max-height: 666px;
@@ -16,6 +16,6 @@
   transition: display 0.2s ease-in;
 }
 
-.NewsSection {
+.news-section {
   height: auto;
 }
