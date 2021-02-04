@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./Footer.css";
+import "./footer.css";
 import whiteLogo from "../../assets/images/white-logo.png";
 
-const Footer = (props) => {
+const footer = (props) => {
   return (
     <footer className={"Footer"}>
       <div className={"FooterContent"}>
@@ -22,4 +22,4 @@ const Footer = (props) => {
   );
 };
 
-export default Footer;
+export default footer;

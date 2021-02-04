@@ -5,7 +5,7 @@ import "./App.css"
 
 import Home from "./pages/home";
 import News from "./pages/news";
-import Layout from "./components/layout";
+import Layout from "./components/layoutt";
 
 class App extends Component {
   render() {

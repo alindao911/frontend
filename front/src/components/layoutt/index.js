@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
-import Footer from "../footer";
+import Footer from "../foooter";
 import Nav from "../nav";
 import * as actions from "../../pages/home/store/actions";
 
