@@ -1,1 +1,0 @@
-export const SET_AUTH_FORM_OPENED = "SET_AUTH_FORM_OPENED";
