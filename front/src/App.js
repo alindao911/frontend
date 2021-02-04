@@ -3,7 +3,8 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import "./App.css";
-import * as actions from "../src/pages/home/store/actions";
+import * as homeActions from "../src/pages/home/store/actions";
+import * as newsActions from "../src/pages/news/store/actions";
 import { news, auth } from "./assets/data";
 
 import Home from "./pages/home";
@@ -12,7 +13,8 @@ import Layout from "./components/layout";
 
 class App extends Component {
   componentDidMount() {
-    this.props.handleFetchInitialData({ news: news, auth: auth });
+    this.props.setInitialAuthData(auth);
+    this.props.setInitialNewsData(news);
   }
 
   render() {
@@ -32,7 +34,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleFetchInitialData: (news) => dispatch(actions.setInitialData(news)),
+  setInitialAuthData: (auth) => dispatch(homeActions.setInitiaAuthData(auth)),
+  setInitialNewsData: (news) => dispatch(newsActions.setInitialNewsData(news)),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

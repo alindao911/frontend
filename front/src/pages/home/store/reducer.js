@@ -1,8 +1,7 @@
-import { SET_INITIAL_DATA, SET_AUTH_FORM_OPENED } from "./action-types";
+import { SET_INITIAL_AUTH_DATA, SET_AUTH_FORM_OPENED } from "./action-types";
 
 const initialState = {
   isAuthFormOpened: false,
-  news: [],
   auth: [],
 };
 
@@ -13,11 +12,10 @@ const HomeReducer = (state = initialState, { type, payload }) => {
         ...state,
         isAuthFormOpened: payload,
       };
-    case SET_INITIAL_DATA:
+    case SET_INITIAL_AUTH_DATA:
       return {
         ...state,
-        news: payload.news,
-        auth: payload.auth,
+        auth: payload,
       };
     default:
       return state;

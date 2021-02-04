@@ -1,0 +1,50 @@
+.Articles {
+  max-width: 1366px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.Articles h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: "Montseratt", sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.ArticlesWrapper {
+  flex-wrap: wrap;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-box-pack: start;
+  justify-content: flex-start;
+  list-style-type: none;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.ArticlesBtnWrapper {
+  width: 340px;
+  height: 70px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.ArticleNavWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ArticleNavWrapper a {
+  position: relative;
+  align-self: center;
+  color: #101010;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ArticleNavWrapper a:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in;
+}
