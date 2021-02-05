@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 import Footer from "../footer";
 import Nav from "../nav";
@@ -8,6 +9,7 @@ import * as actions from "../../pages/home/store/actions";
 const Layout = (props) => {
   const { isAuthFormOpened, handleAuthFormToggle } = props;
   const [authFormVisible, setAuthFormVisible] = useState(isAuthFormOpened);
+  const history = useHistory();
 
   useEffect(() => {
     setAuthFormVisible(isAuthFormOpened);
@@ -16,6 +18,7 @@ const Layout = (props) => {
   const authFormToggleHandler = () => {
     setAuthFormVisible(!authFormVisible);
     handleAuthFormToggle(!authFormVisible);
+    history.push("/");
   };
 
   return (
@@ -23,6 +26,7 @@ const Layout = (props) => {
       <Nav
         isAuthFormOpened={authFormVisible}
         handleAuthFormToggle={authFormToggleHandler}
+        history={history}
       />
       <main>{props.children}</main>
       <Footer />

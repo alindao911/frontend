@@ -1,17 +1,16 @@
-.Articles {
-  max-width: 1366px;
+.news {
+  max-width: 1200px;
   height: auto;
   margin: 0 auto;
 }
 
-.Articles h1 {
+.news h1 {
   font-size: 50px;
   text-transform: uppercase;
-  font-family: "Montseratt", sans-serif;
   letter-spacing: 0.2em;
 }
 
-.ArticlesWrapper {
+.news-container {
   flex-wrap: wrap;
   display: flex;
   -webkit-box-pack: start;
@@ -23,7 +22,7 @@
   padding: 0;
 }
 
-.ArticlesBtnWrapper {
+.news-btn {
   width: 340px;
   height: 70px;
   margin: 0 auto;
@@ -31,12 +30,12 @@
   margin-bottom: 150px;
 }
 
-.ArticleNavWrapper {
+.news-header {
   display: flex;
   justify-content: space-between;
 }
 
-.ArticleNavWrapper a {
+.news-header a {
   position: relative;
   align-self: center;
   color: #101010;
@@ -44,7 +43,71 @@
   font-weight: bold;
 }
 
-.ArticleNavWrapper a:hover {
+.news-header a:hover {
   opacity: 0.7;
   transition: opacity 0.3s ease-in;
+}
+
+.news-item {
+  width: 30%;
+  max-height: 400px;
+  margin-bottom: 50px;
+  border: 1px solid #101010;
+  text-align: center;
+  cursor: pointer;
+}
+
+.news-item:hover {
+  opacity: 0.5;
+}
+
+.news-img {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.news-details {
+  text-align: left;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.news-date {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+
+.news-title {
+  font-weight: 600;
+}
+
+.news-title,
+.news-description {
+  display: block;
+  font-size: 20px;
+  margin: 5px 0 5px 0;
+}
+
+.news-description {
+  font-weight: 400;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 280px;
+  max-height: 100px;
+  margin: 0 auto;
+  line-height: 1.2;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

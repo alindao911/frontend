@@ -1,24 +1,23 @@
 import React from "react";
 
 const Login = (props) => {
+  const { form, handleOnChange } = props;
   return (
     <div>
-      <div className={"Input"}>
-        <label className={"Label"}>Email</label>
+      <div className={"input"}>
+        <label>Email</label>
         <input
-          className={"Input"}
-          value={props.value}
-          onChange={props.changed}
+          value={form.email.value}
+          onChange={(event) => handleOnChange(event, form.email.name)}
         />
-        <label className={"Label"}>Password</label>
+        <label>Password</label>
         <input
-          className={"Input"}
-          value={props.value}
-          onChange={props.changed}
-          type={'password'}
+          value={form.password.value}
+          onChange={(event) => handleOnChange(event, form.password.name)}
+          type={"password"}
         />
       </div>
-      <button className={"Button Primary"} onClick={props.clicked}>
+      <button className={"button primary"} onClick={props.clicked}>
         Login
       </button>
     </div>

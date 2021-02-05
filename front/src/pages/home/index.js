@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import "./home.css";
 import Auth from "../auth";
 import News from "../news";
+import Slider from "./slider";
 
 const Home = (props) => {
-  console.log(props.news);
   return (
     <div>
       <section
@@ -19,7 +19,9 @@ const Home = (props) => {
         className={"slider-section"}
         style={props.isAuthFormOpened ? { display: "none" } : {}}
       >
-        <h1>Slider</h1>
+        {props.news.length !== 0 ? (
+          <Slider news={props.news.slice(0, 3)} />
+        ) : null}
       </section>
       <section className={"news-section"}>
         <News />
@@ -30,7 +32,7 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => ({
   isAuthFormOpened: state.home.isAuthFormOpened,
-  news: state.home.news,
+  news: state.news.news,
 });
 
 export default connect(mapStateToProps)(Home);

@@ -1,21 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "./news.css";
+import NewsItem from "./item";
 
 const News = (props) => {
+  let row = [];
+
+  if (props.news) {
+    props.news.map((item) => row.push(<NewsItem key={item.id} item={item} />));
+  }
+
   return (
     <div>
-      <section className={"Articles"}>
-        <div className={"ArticleNavWrapper"}>
+      <section className={"news"}>
+        <div className={"news-header"}>
           <h1>News</h1>
-          {props.isAuthenticated && (
-            <Link to="/article/new">Create New Post</Link>
+          {props.isLoggedIn && (
+            <Link
+              to="/news/create"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Create New Post
+            </Link>
           )}
         </div>
-        <ul className={"ArticlesWrapper"}>try</ul>
-        <div className={"ArticlesBtnWrapper"}>
-          <button className={"Button Primary"} onClick={props.clicked}>
+        <ul className={"news-container"}>{row}</ul>
+        <div className={"news-btn"}>
+          <button className={"button primary"} onClick={props.clicked}>
             Load More
           </button>
         </div>
@@ -24,4 +37,9 @@ const News = (props) => {
   );
 };
 
-export default News;
+const mapStateToProps = (state) => ({
+  news: state.news.news,
+  isLoggedIn: state.home.isLoggedIn,
+});
+
+export default connect(mapStateToProps)(News);
