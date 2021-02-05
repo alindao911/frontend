@@ -1,11 +1,11 @@
 # Front End Examination
 
-# Run yarn install or npm install
-# Then yarn start or npm start
+## Run yarn install or npm install
+## Then yarn start or npm start
 
-# initial credentials
+## initial credentials
 -- email: charles@test.com
 -- password: password
 
-# Initial Objects Stored on Reducer
+## Initial Objects Stored on Reducer
 -- logged in status stored on localstorage to maintain the data
